@@ -2,10 +2,9 @@
 
 <div class="container">
   <div class="broad_img" id="broad_img">Select an Image to view in large mode.</div>
-
-<!--  <img class="big_img" id="big_img0" alt="" src="http://localhost:4200/assets/images/i4.jpeg">-->
-  <img id="big_img" [src]="presentation_image">
-<!--  <img src="./assets/images/i1.jpeg">-->
+  <!--  <img class="big_img" id="big_img0" alt="" src="http://localhost:4200/assets/images/i4.jpeg">-->
+  <img class="big_img" id="big_img" [src]="presentation_image">
+  <!--  <img src="./assets/images/i1.jpeg">-->
   <div class="images_gallery">
     <img (click)="myImage($event)" id="image1" class="tiny_img" src="./assets/images/i1.jpeg" alt="image 1">
     <img (click)="myImage($event)" id="image2" class="tiny_img" src="./assets/images/i2.jpeg" alt="image 2">
@@ -19,3 +18,5 @@
   </div>
 
 </div>
+
+<button (click)="onTrigger($event)">Trigger Event</button>

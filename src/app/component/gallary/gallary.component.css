@@ -1,24 +1,33 @@
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox */
+/* https://codepen.io/adityajanuardi/pen/YzydaVj */
+/* https://www.youtube.com/watch?v=KpesXpJbKN8 */
+
+/*
 *, ::after, ::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
+*/
+/*
 body {
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: center;
     height: 100vh;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
+*/
 
+/*
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+*/
 
 .broad-img {
     width: 75vw;
@@ -37,22 +46,23 @@ body {
 .big_img {
     display: flex;
     width: 75vw;
-    height: 600px;
+    height: 300px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
 
 .images_gallery {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: left;
     align-items: center;
-    width: 75vw;
-    height: 150px;
+    width: 40vw;
+    height: 170px;
     padding: 5px;
     /* overflow-x: scroll; */
     overflow: auto;
     white-space: nowrap;
-    background-color: bisque;
+    background-color: skyblue;
 }
 
 .gridscroll{
