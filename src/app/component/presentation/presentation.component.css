@@ -1,17 +1,52 @@
 /* HORIZONTAL SCROLL */
-.scroll-container{
+.scroll-container {
+  display: flex;
+  flex-direction: row;
   overflow: auto;
   white-space: nowrap;
-  padding: 5px 70px 5px 20px;
+  /* padding: 5px 70px 5px 20px; */
   background: transparent;
+  /* justify-content: center; */
+  justify-content: left;
+  align-items: center;
+  width: 50vw;
   height: 100%;
   border-radius:15px;
 }
 
+/*
 .gridscroll{
   display:inline-block;
 }
 
 .gridscroll img {
   margin-right:22px;
+}
+*/
+
+/*
+.images_gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 150px;
+    padding: 5px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    background-color: bisque;
+}
+*/
+
+.tiny_img {
+    width: 120px;
+    height: 120px;
+    margin: 12px;
+    border-radius: 90%;
+    border: 3px solid #fff;
+}
+
+.tiny_img: hover {
+    transform: scale(1.08);
+    cursor: zoom-in;
 }
