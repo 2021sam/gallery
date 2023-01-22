@@ -7,7 +7,7 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     height: 100vh;
     /* overflow: hidden; */
@@ -35,7 +35,7 @@ body {
 
 
 .big_img {
-    display: none;
+    display: flex;
     width: 75vw;
     height: 600px;
     border-top-left-radius: 12px;
@@ -51,7 +51,16 @@ body {
     padding: 5px;
     /* overflow-x: scroll; */
     overflow: auto;
+    white-space: nowrap;
     background-color: bisque;
+}
+
+.gridscroll{
+  display:inline-block;
+}
+
+.gridscroll img {
+  margin-right:22px;
 }
 
 .tiny_img {
@@ -61,7 +70,6 @@ body {
     border-radius: 50%;
     border: 3px solid #fff;
 }
-
 
 .tiny_img: hover {
     transform: scale(1.08);
