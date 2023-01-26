@@ -6,8 +6,8 @@
   <img class="big_img" id="big_img" [src]="presentation_image">
   <!--  <img src="./assets/images/i1.jpeg">-->
   <div class="images_gallery">
-    <img (click)="myImage($event)" id="image1" class="tiny_img" src="./assets/images/i1.jpeg" alt="image 1">
-    <img (click)="myImage($event)" id="image2" class="tiny_img" src="./assets/images/i2.jpeg" alt="image 2">
+    <img (click)="myImage($event)" id="image1" class="tiny_img" src="./assets/images/i1.jpeg" alt="image 1" [tooltip]="'Image One'">
+    <img (click)="myImage($event)" id="image2" class="tiny_img" src="./assets/images/i2.jpeg" alt="image 2" [tooltip]="'Image Two'">
     <img (click)="myImage($event)" id="image3" class="tiny_img" src="./assets/images/i3.jpeg" alt="image 3">
     <img (click)="myImage($event)" id="image4" class="tiny_img" src="./assets/images/i4.jpeg" alt="image 4">
     <img (click)="myImage($event)" id="image5" class="tiny_img" src="./assets/images/i5.jpeg" alt="image">
@@ -20,3 +20,5 @@
 </div>
 
 <button (click)="onTrigger($event)">Trigger Event</button>
+
+<!--<div class="user-icon" [tooltip]="'Sign In'">Cool</div>-->
