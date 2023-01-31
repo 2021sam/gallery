@@ -7,7 +7,7 @@
   <!--  <img src="./assets/images/i1.jpeg">-->
     <div class="images_gallery">
        <p *ngFor="let pslide of PRESENTATION">
-         <img (click)="myImage($event)" id="{{pslide.image}}" class="tiny_img" src="./assets/images/{{pslide.image}}" [tooltip]=pslide.title [image_description]="'This is some awesome details.'"   >
+         <img (click)="myImage($event)" id="{{pslide.image}}" class="tiny_img" src="./assets/images/{{pslide.image}}" [tooltip]=pslide.title [image_description]=pslide.description  >
        </p>
     </div>
 
