@@ -5,20 +5,14 @@
   <!--  <img class="big_img" id="big_img0" alt="" src="http://localhost:4200/assets/images/i4.jpeg">-->
   <img class="big_img" id="big_img" [src]="presentation_image">
   <!--  <img src="./assets/images/i1.jpeg">-->
-  <div class="images_gallery">
-    <img (click)="myImage($event)" id="image1" class="tiny_img" src="./assets/images/i1.jpeg" alt="image 1" [tooltip]="'Image One'">
-    <img (click)="myImage($event)" id="image2" class="tiny_img" src="./assets/images/i2.jpeg" alt="image 2" [tooltip]="'Image Two'">
-    <img (click)="myImage($event)" id="image3" class="tiny_img" src="./assets/images/i3.jpeg" alt="image 3">
-    <img (click)="myImage($event)" id="image4" class="tiny_img" src="./assets/images/i4.jpeg" alt="image 4">
-    <img (click)="myImage($event)" id="image5" class="tiny_img" src="./assets/images/i5.jpeg" alt="image">
-    <img (click)="myImage($event)" id="image6" class="tiny_img" src="./assets/images/i6.jpeg" alt="image">
-    <img (click)="myImage($event)" id="image7" class="tiny_img" src="./assets/images/i7.jpeg" alt="image">
-    <img (click)="myImage($event)" id="image8" class="tiny_img" src="./assets/images/i8.jpeg" alt="image">
-    <img (click)="myImage($event)" id="image9" class="tiny_img" src="./assets/images/i9.jpeg" alt="image">
-  </div>
+    <div class="images_gallery">
+       <p *ngFor="let pslide of PRESENTATION">
+         <img (click)="myImage($event)" id="{{pslide.image}}" class="tiny_img" src="./assets/images/{{pslide.image}}" [tooltip]=pslide.title [image_description]="'This is some awesome details.'"   >
+       </p>
+    </div>
 
-</div>
-
-<button (click)="onTrigger($event)">Trigger Event</button>
+<!--<button (click)="onTrigger($event)">Trigger Event</button>-->
 
 <!--<div class="user-icon" [tooltip]="'Sign In'">Cool</div>-->
+<!--<H1 class="titletip">{{titletip}}</H1>-->
+<!--<p class="bodytip">Body Tip</p>-->

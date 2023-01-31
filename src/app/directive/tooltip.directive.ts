@@ -17,18 +17,28 @@ import { Directive, ElementRef, OnDestroy, HostListener, Component, Input } from
 })
 
 
-export class TooltipDirective implements OnDestroy {
+export class TooltipDirective implements OnDestroy
+ {
   @Input() tooltip = ""; // The text for the tooltip to display
+  @Input () image_description = "";   //: string;
+//   @Input() appBtnGrow: string
   @Input() delay? = 190; // Optional delay input, in ms
 
   private myPopup: any;
+  private myPop_description: any;
   private timer: any;
+  titletip: string = 'Very Cool';
 
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef) {
+    console.log(el);
+  }
 
   ngOnDestroy(): void {
     if (this.myPopup) {
       this.myPopup.remove();
+    }
+    if (this.myPop_description) {
+      this.myPop_description.remove();
     }
   }
 
@@ -45,23 +55,40 @@ export class TooltipDirective implements OnDestroy {
     }, this.delay);
   }
 
-  @HostListener("mouseleave") onMouseLeave() {
+  @HostListener("mouseleave") onMouseLeave()
+   {
     if (this.timer) clearTimeout(this.timer);
-    if (this.myPopup) {
+    if (this.myPopup)
+     {
       this.myPopup.remove();
     }
+
+        if (this.myPop_description) {
+      this.myPop_description.remove();
+    }
+
+
   }
 
-  private createTooltipPopup(x: number, y: number) {
-    let popup = document.createElement("div");
+  private createTooltipPopup(x: number, y: number)
+   {
+    console.log(this.image_description);
+
+    let popup = document.createElement("h1");
+    let pop_description = document.createElement("h4");
     popup.innerHTML = this.tooltip;
+    pop_description.innerHTML = this.image_description;
     popup.setAttribute("class", "tooltip-container");
     popup.style.top = y.toString() + "px";
     popup.style.left = x.toString() + "px";
     document.body.appendChild(popup);
+    document.body.appendChild(pop_description);
     this.myPopup = popup;
+    this.myPop_description = pop_description;
     setTimeout(() => {
       if (this.myPopup) this.myPopup.remove();
+      if (this.myPop_description) this.myPop_description.remove();
     }, 5000); // Remove tooltip after 5 seconds
   }
+
 }
