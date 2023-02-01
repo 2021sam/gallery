@@ -27,17 +27,6 @@ export class GallaryComponent
 
 
 
-
-//   public PRESENTATION: Slide[] = [
-//     {image: "i1.jpeg", title: "Title 1", description: "Description 1 - For finer insights."},
-//     {image: "i2.jpeg", title: "Title 2", description: "Description 2 - For finer details."}
-//     ];
-
-
-
-//   @HostBinding("class.images_gallery") height: string = '170px';
-
-
     myImage(x: any)
     {
         //       const b_img = document.querySelector(".big_img");
